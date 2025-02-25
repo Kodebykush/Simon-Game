@@ -1,0 +1,70 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="info-icon" id="info-icon">i</div>
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="instructions-modal" id="instructions-modal">
+        <button class="close-modal" id="close-modal">&times;</button>
+        <h2>How to Play Simon</h2>
+        <p>Simon is a memory game where you need to repeat a sequence of colors and sounds.</p>
+        <h3>Game Rules:</h3>
+        <ul>
+            <li>Watch and listen to the sequence played by Simon</li>
+            <li>Repeat the sequence by clicking the colored buttons in the same order</li>
+            <li>Each successful round adds one more step to the sequence</li>
+            <li>If you make a mistake, the game ends and your score is saved</li>
+        </ul>
+        <h3>Difficulty Levels:</h3>
+        <ul>
+            <li><strong>Easy:</strong> Slower sequence, longer flash duration (Max Level: 20)</li>
+            <li><strong>Medium:</strong> Moderate speed and flash duration (Max Level: 30)</li>
+            <li><strong>Hard:</strong> Fast sequence, short flash duration (Max Level: 50)</li>
+        </ul>
+        <p>Try to achieve the highest level possible and compete for the top 5 scores in each difficulty!</p>
+    </div>
+    <h1>Simon Game</h1>
+    <div class="game-container">
+        <div class="button red" data-color="red"></div>
+        <div class="button blue" data-color="blue"></div>
+        <div class="button green" data-color="green"></div>
+        <div class="button yellow" data-color="yellow"></div>
+    </div>
+    <button id="start-btn">Start Game</button>
+    <select id="difficulty-select">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <select id="theme-select">
+        <option value="light">Light Theme</option>
+        <option value="dark">Dark Theme</option>
+        <option value="neon">Neon Theme</option>
+    </select>
+    <p id="status"></p>
+    <div id="high-scores">
+        <h2>High Scores</h2>
+        <div class="scores-container">
+            <div class="difficulty-scores">
+                <h3>Easy</h3>
+                <ul id="easy-scores" class="score-list"></ul>
+            </div>
+            <div class="difficulty-scores">
+                <h3>Medium</h3>
+                <ul id="medium-scores" class="score-list"></ul>
+            </div>
+            <div class="difficulty-scores">
+                <h3>Hard</h3>
+                <ul id="hard-scores" class="score-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
